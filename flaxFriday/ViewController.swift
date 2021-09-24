@@ -66,10 +66,10 @@ class ViewController: UIViewController
     {
         self.view.backgroundColor = UIColor.red
         
-        buttonName1 = "NO CHOSE ME!!"
+        buttonName1 = "NO PICK ME!!"
         imageButton.setTitle(buttonName1, for: .normal)
         
-        buttonName2 = "Chose me"
+        buttonName2 = "Pick me"
         colorButton.setTitle(buttonName2, for: .normal)
     }
     
@@ -78,10 +78,10 @@ class ViewController: UIViewController
     {
         self.view.backgroundColor = UIColor.gray
         
-        buttonName1 = "NO CHOSE ME!!"
+        buttonName1 = "NO PICK ME!!"
         colorButton.setTitle(buttonName1, for: .normal)
         
-        buttonName2 = "Chose me"
+        buttonName2 = "Pick me"
         imageButton.setTitle(buttonName2, for: .normal)
     }
     
