@@ -52,7 +52,8 @@ class ViewController: UIViewController
     
     // For the background with an image
     @IBOutlet weak var imageButton: UIButton!
-    
+    var buttonName1 = ""
+    var buttonName2 = ""
     
     //MARK: "NO CHOSE ME!!"
     override func viewDidLoad()
@@ -65,13 +66,23 @@ class ViewController: UIViewController
     {
         self.view.backgroundColor = UIColor.red
         
+        buttonName1 = "NO CHOSE ME!!"
+        imageButton.setTitle(buttonName1, for: .normal)
+        
+        buttonName2 = "Chose me"
+        colorButton.setTitle(buttonName2, for: .normal)
     }
     
 //Right now it will chage the backgground will change to a gray
     @IBAction func imageChange(_ sender: UIButton)
     {
         self.view.backgroundColor = UIColor.gray
-            
+        
+        buttonName1 = "NO CHOSE ME!!"
+        colorButton.setTitle(buttonName1, for: .normal)
+        
+        buttonName2 = "Chose me"
+        imageButton.setTitle(buttonName2, for: .normal)
     }
     
 }
