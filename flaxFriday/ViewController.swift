@@ -9,9 +9,10 @@ import UIKit
 
 // Button Corner Radius and Border code from StackOverflow.com
 
-@IBDesignable extension UIButton {
+@IBDesignable extension UIButton{
 
     @IBInspectable var borderWidth: CGFloat {
+
         set {
             layer.borderWidth = newValue
         }
@@ -41,13 +42,37 @@ import UIKit
     }
 }
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+class ViewController: UIViewController
+{
+    // Will be used to count the number on much the user change the back ground
+    @IBOutlet weak var numberLable: UILabel!
+    
+    // For the background with a color
+    @IBOutlet weak var colorButton: UIButton!
+    
+    // For the background with an image
+    @IBOutlet weak var imageButton: UIButton!
+    
+    
+    //MARK: "NO CHOSE ME!!"
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+//Right now it will change the background will change to a teal
+    @IBAction func colorChange(_ sender: UIButton)
+    {
+        self.view.backgroundColor = UIColor.red
+        
+    }
+    
+//Right now it will chage the backgground will change to a gray
+    @IBAction func imageChange(_ sender: UIButton)
+    {
+        self.view.backgroundColor = UIColor.gray
+            
+    }
+    
 }
 
