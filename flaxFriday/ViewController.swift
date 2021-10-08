@@ -52,38 +52,74 @@ class ViewController: UIViewController
     
     // For the background with an image
     @IBOutlet weak var imageButton: UIButton!
+    
+    @IBOutlet weak var notButton: UIButton!
+    
+    // Use to change the texts on the UIButton
     var buttonName1 = ""
     var buttonName2 = ""
+    var buttonName3 = ""
     
-    //MARK: "NO CHOSE ME!!"
     override func viewDidLoad()
     {
         super.viewDidLoad()
     }
     
-//Right now it will change the background will change to a teal
+//MARK: PINK background (yellow)
     @IBAction func colorChange(_ sender: UIButton)
     {
-        self.view.backgroundColor = UIColor.red
+        self.view.backgroundColor = UIColor.systemYellow
         
         buttonName1 = "NO PICK ME!!"
         imageButton.setTitle(buttonName1, for: .normal)
         
         buttonName2 = "Pick me"
         colorButton.setTitle(buttonName2, for: .normal)
+        
+        buttonName3 = "You don't see me!!"
+        notButton.setTitle(buttonName3, for: .normal)
+        
+        colorButton.backgroundColor = UIColor.systemPink
     }
     
-//Right now it will chage the backgground will change to a gray
+//MARK: PURPLE background (purple)
     @IBAction func imageChange(_ sender: UIButton)
     {
-        self.view.backgroundColor = UIColor.gray
+        self.view.backgroundColor = UIColor.purple
         
         buttonName1 = "NO PICK ME!!"
         colorButton.setTitle(buttonName1, for: .normal)
-        
+    
         buttonName2 = "Pick me"
         imageButton.setTitle(buttonName2, for: .normal)
+        
+        buttonName3 = "You don't see me!!"
+        notButton.setTitle(buttonName3, for: .normal)
+        
+        imageButton.backgroundColor = UIColor.systemPurple
     }
+    
+//MARK: below the Pick me Buttons
+    @IBAction func badNoGood(_ sender: Any)
+    {
+        self.view.backgroundColor = UIColor.black
+        
+        buttonName1 = ""
+        colorButton.setTitle(buttonName1, for: .normal)
+        colorButton.backgroundColor = UIColor.black
+        
+        buttonName2 = ""
+        imageButton.setTitle(buttonName2, for: .normal)
+        imageButton.backgroundColor = UIColor.black
+        
+        buttonName3 = "You should've listen >:("
+        notButton.setTitle(buttonName3, for: .normal)
+    }
+    
+
+    
+    
+    
     
 }
 
