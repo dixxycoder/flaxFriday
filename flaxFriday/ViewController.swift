@@ -60,14 +60,20 @@ class ViewController: UIViewController
     var buttonName2 = ""
     var buttonName3 = ""
     
+    // To keep count if the number of time you change the background.
+    var x = 0
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
     }
     
-//MARK: PINK background (yellow)
+//MARK: YELLOW background (Pink)
     @IBAction func colorChange(_ sender: UIButton)
     {
+         x += 1
+        numberLable.text = "\(x)"
+        
         self.view.backgroundColor = UIColor.systemYellow
         
         buttonName1 = "NO PICK ME!!"
@@ -85,6 +91,9 @@ class ViewController: UIViewController
 //MARK: PURPLE background (purple)
     @IBAction func imageChange(_ sender: UIButton)
     {
+        x += 1
+        numberLable.text = "\(x)"
+        
         self.view.backgroundColor = UIColor.purple
         
         buttonName1 = "NO PICK ME!!"
@@ -102,24 +111,21 @@ class ViewController: UIViewController
 //MARK: below the Pick me Buttons
     @IBAction func badNoGood(_ sender: Any)
     {
-        self.view.backgroundColor = UIColor.black
-        
-        buttonName1 = ""
-        colorButton.setTitle(buttonName1, for: .normal)
-        colorButton.backgroundColor = UIColor.black
-        
-        buttonName2 = ""
-        imageButton.setTitle(buttonName2, for: .normal)
-        imageButton.backgroundColor = UIColor.black
-        
-        buttonName3 = "You should've listen >:("
-        notButton.setTitle(buttonName3, for: .normal)
-    }
-    
+         x = 0
+        numberLable.text = "\(x)"
 
-    
-    
-    
-    
+//        self.view.backgroundColor = UIColor.black
+//
+//        buttonName1 = ""
+//        colorButton.setTitle(buttonName1, for: .normal)
+//        colorButton.backgroundColor = UIColor.black
+//
+//        buttonName2 = ""
+//        imageButton.setTitle(buttonName2, for: .normal)
+//        imageButton.backgroundColor = UIColor.black
+//
+//        buttonName3 = "You should've listen >:("
+//        notButton.setTitle(buttonName3, for: .normal)
+    }
 }
 
